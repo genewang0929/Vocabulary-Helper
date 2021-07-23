@@ -1,0 +1,51 @@
+.wordbar {
+    display: flex;
+    flex-direction: row;
+    width: 97%;
+    margin: 1rem;
+    padding: 1rem;
+    border-bottom: dotted;
+}
+
+.word {
+    margin: 1rem;
+    max-width: 38%;
+    width: 38%;
+}
+
+%icon-template {
+    font-size: 2.3rem;
+    font-weight: bold;
+    width: fit-content;
+    padding: .5rem;
+    margin-left: 2rem;
+    border-radius: 40%;
+    border: none;
+    background: white;
+
+    :hover {
+        color: hsla(0, 72%, 49%, 0.15);
+    }
+
+    &.hide {
+        color: white;
+        background-color: black;
+        font-size: 3.3rem;
+        position: relative;
+        top: 50%;
+        left: 90%;
+        :hover {
+            color: white;
+        }
+    }
+}
+
+.icon {
+    @extend %icon-template;
+    color: black;
+}
+
+.icon-1 {
+    @extend %icon-template;
+    color: hsl(60, 82%, 45%);
+}

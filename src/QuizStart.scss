@@ -1,0 +1,102 @@
+@keyframes countdown {
+    from {
+        transform: scale(1.3);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.quizstart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    padding: 1rem;
+
+    &.blackborder {
+        background: black;
+        width: 40rem;
+        aspect-ratio: 16/9;
+        border-radius: 10px;
+        border-style: double;
+        border-color: white;
+    }
+
+    &.font {
+        font-size: 3.5rem;
+        margin: 3rem auto;
+        color: white;
+    }
+
+    &.mid {
+        flex-direction: row;
+    
+        &.inputs {
+            font-size: 2rem;
+            border: none; 
+            border-radius: 10px 0 0 10px;
+            height: 6rem;
+        }
+
+        &.buttons {
+            background: linear-gradient(
+                to right,
+                rgb(128, 127, 129) 0%,
+                rgb(13, 13, 14) 100%
+            );
+            color: white;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 0 10px 10px 0;
+            font-size: 2rem;
+            border: none;
+        }
+    }
+}
+
+.grid-container {
+    margin-top: 4rem;
+    display: grid;
+    grid-column-gap: 20rem;
+    grid-template-columns: auto auto;
+    // background-color: #fff;
+    padding: 1rem;
+}
+
+%grid-item {
+    display: grid;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.grid-item--1 {
+    @extend %grid-item;
+    color: hsl(0, 69%, 61%);
+    animation-name: countdown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.grid-item--2 {
+    @extend %grid-item;
+    color: hsl(189, 100%, 40%);
+}
+
+%answerMark {
+    position: absolute;
+    font-size: 5rem;
+    left: 62%;
+    top: 52%;
+}
+
+.answer--1 {
+    @extend %answerMark;
+    color: limegreen;
+}
+
+.answer--2 {
+    @extend %answerMark;
+    color: red;
+}

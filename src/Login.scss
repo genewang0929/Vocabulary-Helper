@@ -1,0 +1,113 @@
+
+
+.login {
+    position: relative;
+    &.container {
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 10px;
+        width: 55rem;
+        height: 55rem;
+        background: #fff;
+    }
+
+    &.head {
+        background-color: black;
+        border-radius: 10px 10px 0 0;
+        padding: .5rem;
+    }
+
+    &.text {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 5rem;
+        font-weight: bold;
+        letter-spacing: 1.1rem;
+        color: #fff;
+    }
+    
+    &.type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: .5rem;
+        padding: 0;
+
+        &.line {
+            border-bottom: 1px solid black;
+            width: 84.5%;
+            left: 5%;
+            opacity: .3;
+        }
+    }
+}
+
+.login__input {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 4px;
+    font-size: 2.3rem;
+    margin: .5rem;
+    opacity: .6;
+    width: 90%;
+
+    &.user {
+        margin: .5rem;
+        padding: .5rem 2.5rem;
+    }
+}
+
+.login__button {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    width: 90%;
+    height: 5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    margin: .5rem;
+    border-radius: 4px;
+    border: none;
+    background: linear-gradient(
+        to right bottom, 
+        rgb(149, 149, 255),
+        rgb(79, 79, 180)
+    );
+
+    &:hover {
+        opacity: .9;
+    }
+
+    &.second {
+        background: linear-gradient(
+            to left top,
+            rgb(126, 224, 126),
+            rgb(44, 116, 44)
+        );
+    }
+
+    &.exit {
+        background: rgb(224, 224, 224);
+        color: black;
+    }
+}
+
+.forgot {
+    font-size: 1.5rem;
+    color: rgb(0, 153, 255);
+    text-decoration: none;
+    margin-bottom: 3.5rem;
+}
+
+.forgotPW {
+    background: black;
+    &.text {
+        font-size: 4rem;
+        letter-spacing: 1.1rem;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        top: 25%;
+        padding: auto;
+    }
+}

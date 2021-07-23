@@ -1,0 +1,53 @@
+.Settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 1rem;
+
+    &.font {
+        font-size: 5rem;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1rem;
+    }
+
+    &.start {
+        border-radius: 10rem;
+        width: 18rem;
+        height: 4rem;
+        font-size: 2rem;
+        font-weight: bold;
+        border: none;
+
+        &:hover {
+            transform: scale(1.1,1.1);
+            transition: transform 0.25s ease;
+        }
+    }
+}
+
+.newpassword {
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+    margin: 2rem;
+    font-size: 2rem;
+    color: white;
+    width: 50%;
+    
+    &.enterpass {
+        width: 100%;
+        color: black;
+        border-radius: 4px;
+        border: none;
+        position: relative;
+        left: -5%;
+    }
+
+    &.text {
+        position: relative;
+        left: 5%;
+    }
+}
